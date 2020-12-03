@@ -15,6 +15,65 @@
 			}
 
 			.container{width:800px; margin:0 auto;text-align:center}
+
+			/*.section.box ul li{display: inline-block;}
+			.section.box ul li:first-child{color: red;};
+			.section.box ul li:first-child(2){color: red;}
+			.section.box ul > *{border:1px solid #333}
+			/* 자식선택자
+			.section.box > ul{border: 2px solid blue}
+			/* 인접선택자
+			.section.box ul li + li{font-weight: bold;}
+			.section.box ul li::before{
+				content: '';
+				display: inline-block;
+				width: 3px;
+				height: 3px;
+				background-color: red;
+				vertical-align: middle;
+			}*/
+
+			/* section */
+			.section.box .box{
+				width: 200px;
+				height: 100px;
+				display: block;
+				background: red;
+				float: left;
+				list-style: none;
+				line-height: 100px;
+			}
+			.section.box .box:hover{
+				background: green;
+			}
+			.section.box .box:nth-child(2){
+			background: grey;
+			}
+			.section.box .box + .box{
+				margin-left: 100px;
+			}
+			.section.box ul{
+				padding: 0;
+			}
+			.section.box::after{
+				content: '';
+				display: block;
+				clear: both;
+			}
+			
+			/* link */
+			.section.link > div{
+				display: inline-block;
+				width: 50px;
+				height: 50px;
+				border: 5px solid red;
+			}
+
+			/* txt */
+			.section.txt{
+				background: grey;
+				text-align: center;
+			}
 		</style>
 
   </head>
@@ -26,13 +85,13 @@
 				<div class="section box">
 					<ul>
 						<li class="box">
-							<a href="#">box1</a>
+							box1
 						</li>
 						<li class="box">
-							<a href="#">box2</a>
+							box2
 						</li>
 						<li class="box">
-							<a href="#">box3</a>
+							box3
 						</li>
 					</ul>
 				</div>
